@@ -1,95 +1,115 @@
-import React from 'react'
+import React from "react";
 
 function Home() {
-  <div id="background-blobs">
-  <div className="blob blob1"></div>
-  <div className="blob blob2"></div>
-  <div className="blob blob3"></div>
-</div>
   return (
-
-
-    
-    <div className='max-w-5xl mx-auto p-6 bg-white rounded-3xl shadow-lg mt-16 z-10'>
-      {/* Main horizontal layout */}
-      <div className='flex gap-8'>
-        {/* Left Column: Targets and Meals */}
-        <div className='flex flex-col flex-1 gap-6'>
-          <div>
-
-            <section className='bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl p-6 mb-6 text-white font-semibold'>
-  <h2 className='text-xl font-bold mb-4'>Today's target</h2>
-  <div className='flex gap-6'>
-    <div className="bg-red-400 rounded-lg p-4 flex flex-col items-center w-32 shadow-md ">
-      <span className='text-3xl'>🔥</span>
-      <h2 className="text-xl mt-2">Calories</h2>
-      <p className="text-2xl font-bold mt-1">2100</p>
-    </div>
-    <div className='bg-yellow-400 rounded-lg p-4 flex flex-col items-center w-32 shadow-md'>
-      <span className="text-3xl">🟡</span>
-      <h2 className="text-xl mt-2">Protein</h2>
-      <p className="text-2xl font-bold mt-1">110 g</p>
-    </div>
-    <div className='bg-green-400 rounded-lg p-4 flex flex-col items-center w-32 shadow-md'>
-      <span className="text-3xl">✔️</span>
-      <h2 className="text-xl mt-2">Carbs</h2>
-      <p className="text-2xl font-bold mt-1">140 g</p>
-    </div>
-  </div>
-</section>
-
+    <div className="w-full max-w-6xl mx-auto mt-6 p-2 sm:p-6 lg:p-8 rounded-3xl shadow-2xl bg-[#F8F9FB] relative">
+      {/* Main container grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-6">
+        {/* Left Side: Targets & Meals */}
+        <div className="flex flex-col gap-6">
+          {/* Targets */}
+          <div className="bg-gradient-to-br from-[#35b6d6] to-[#56a7e7] rounded-2xl shadow-xl px-5 py-5 flex flex-col gap-3">
+            <span className="text-white font-extrabold text-2xl sm:text-3xl mb-2">Today's Targets</span>
+            <div className="flex flex-wrap gap-4">
+              {/* Calories */}
+              <div className="bg-[#F59992] shadow-xl rounded-xl px-7 py-4 flex flex-col justify-between" style={{minWidth:120}}>
+                <span className="text-white font-bold text-lg mb-1 flex items-center gap-2">
+                  <span className="inline-block">
+                    {/* example icon */}
+                    <svg width={22} height={22} fill="none"><circle cx={11} cy={11} r={11} fill="#fff5f4"/><path d="M11 6a1.5 1.5 0 0 1 1.5 1.5V10h1a1.5 1.5 0 1 1 0 3h-1.5V15a1.5 1.5 0 0 1-3 0v-2h-1a1.5 1.5 0 1 1 0-3h1.5V7.5A1.5 1.5 0 0 1 11 6Z" fill="#fff"/></svg>
+                  </span>
+                  Calories
+                </span>
+                <span className="text-3xl font-bold text-white">2100</span>
+              </div>
+              {/* Protein */}
+              <div className="bg-[#F9DF7C] shadow-xl rounded-xl px-7 py-4 flex flex-col justify-between" style={{minWidth:120}}>
+                <span className="text-[#574300] font-bold text-lg mb-1 flex items-center gap-2">
+                  <span className="inline-block">
+                    {/* example icon */}
+                    <svg width={22} height={22} fill="none"><circle cx={11} cy={11} r={11} fill="#fffbe8"/><ellipse cx="11" cy="11" rx="5" ry="5" fill="#FBCB62" /></svg>
+                  </span>
+                  Protein
+                </span>
+                <span className="text-3xl font-bold text-black">110 g</span>
+              </div>
+              {/* Carbs */}
+              <div className="bg-[#B7B3F9] shadow-xl rounded-xl px-7 py-4 flex flex-col justify-between" style={{minWidth:120}}>
+                <span className="text-[#22246B] font-bold text-lg mb-1 flex items-center gap-2">
+                  <span className="inline-block">
+                    {/* example icon */}
+                    <svg width={22} height={22} fill="none"><circle cx={11} cy={11} r={11} fill="#dcdcff"/><ellipse cx="11" cy="11" rx="5" ry="5" fill="#A398F9" /></svg>
+                  </span>
+                  Carbs
+                </span>
+                <span className="text-3xl font-bold text-[#22246B]">140 g</span>
+              </div>
+            </div>
           </div>
-          
-          {/* Meals */}
-          <section className='flex justify-between gap-6 mb-6'>
-            <div className='bg-yellow-200 rounded-xl p-5 w-1/3 shadow flex flex-col items-center'>
-              <div className="text-4xl mb-2">🥣</div>
-              <h3 className="font-semibold text-lg mb-1">Breakfast</h3>
-              <p className="text-center">Oats, Milk<br />Banana</p>
+          {/* Meals cards row */}
+          <div className="flex flex-wrap sm:flex-nowrap gap-4 justify-between">
+            <div className="flex-1 min-w-[160px] bg-[#FAE079] shadow-xl rounded-xl flex flex-col items-start px-6 py-5">
+              <span className="text-[#132858] text-xl font-bold mb-2">Breakfast</span>
+              {/* Optional: SVG icon */}
+              <span className="mb-2">
+                <svg width={48} height={48} fill="none"><ellipse cx="24" cy="30" rx="18" ry="10" fill="#fffbe8"/><ellipse cx="24" cy="23" rx="12" ry="10" fill="#FFD181" /><ellipse cx="18" cy="23" rx="2" ry="1" fill="#F5A458" /></svg>
+              </span>
+              <span className="text-[#133869] font-semibold text-lg mb-1">Oats, Milk</span>
+              <span className="text-[#133869] text-base">Banana</span>
             </div>
-            <div className='bg-pink-200 rounded-xl p-5 w-1/3 shadow flex flex-col items-center'>
-              <div className="text-4xl mb-2">🍞</div>
-              <h3 className="font-semibold text-lg mb-1">Lunch</h3>
-              <p className="text-center">Paneer<br />2 Rotis, Curd</p>
+            <div className="flex-1 min-w-[160px] bg-[#FFD3B3] shadow-xl rounded-xl flex flex-col items-start px-6 py-5">
+              <span className="text-[#132858] text-xl font-bold mb-2">Lunch</span>
+              <span className="mb-2">
+                <svg width={48} height={48} fill="none">
+                  <rect x="6" y="18" width="36" height="14" rx="6" fill="#fae1cd"/><rect x="12" y="20" width="12" height="10" rx="5" fill="#FFD181" /><rect x="26" y="20" width="16" height="10" rx="5" fill="#FBCB62" />
+                </svg>
+              </span>
+              <span className="text-[#133869] font-semibold text-lg mb-1">Paneer</span>
+              <span className="text-[#133869] text-base">2 Rotis, Curd</span>
             </div>
-            <div className='bg-purple-300 rounded-xl p-5 w-1/3 shadow flex flex-col items-center'>
-              <div className="text-4xl mb-2">🍲</div>
-              <h3 className="font-semibold text-lg mb-1">Dinner</h3>
-              <p className="text-center">Rajma<br />Rice</p>
+            <div className="flex-1 min-w-[160px] bg-[#CFC5F8] shadow-xl rounded-xl flex flex-col items-start px-6 py-5">
+              <span className="text-[#132858] text-xl font-bold mb-2">Dinner</span>
+              <span className="mb-2">
+                <svg width={48} height={48} fill="none">
+                  <ellipse cx="24" cy="36" rx="18" ry="8" fill="#e6e4ff"/> <ellipse cx="24" cy="24" rx="13" ry="8" fill="#523f99"/><ellipse cx="24" cy="24" rx="10" ry="5" fill="#A398F9"/></svg>
+              </span>
+              <span className="text-[#133869] font-semibold text-lg mb-1">Rajma</span>
+              <span className="text-[#133869] text-base">Rice</span>
             </div>
-          </section>
+          </div>
         </div>
-        
-        {/* Right Column: Workout */}
-        <div className='w-1/3 mt-10'>
-          <section className='bg-blue-300 rounded-xl p-5 shadow text-white w-full max-w-md '>
-            <h3 className='font-semibold text-xl mb-3'>Workout</h3>
-            <ul className='space-y-2'>
-              <li className='flex items-center gap-2'>
-                <span className="text-green-400 text-2xl">✔️</span> Goblet Squat
-              </li>
-              <li className='flex items-center gap-2'>
-                <span className="text-green-400 text-2xl">✔️</span> Lat-pull down
-              </li>
-              <li className='flex items-center gap-2'>
-                <span className='text-green-400 text-2xl'>✔️</span> Dumbell press
-              </li>
-              <li className='flex items-center gap-2'>
-                <span className='text-green-400 text-2xl'>✔️</span> Romanian Deadlift
-              </li>
-            </ul>
-            <div className="mt-5 flex justify-center">
-              <div className="w-20 h-20 bg-blue-400 rounded-xl shadow-md" />
+        {/* Right Side: Workout */}
+        <div className="flex flex-col h-full gap-6">
+          <div className="bg-gradient-to-br from-[#7faefc] via-[#a687f6] to-[#796fff] rounded-2xl shadow-xl px-7 py-5 h-full flex flex-col">
+            <span className="text-white text-2xl font-extrabold mb-4">Workout</span>
+            <div className="flex flex-col gap-3 mb-3">
+              <div className="flex items-center text-lg text-white gap-3">
+                <span className="text-green-300 text-2xl">✔️</span> Goblet Squat
+              </div>
+              <div className="flex items-center text-lg text-white gap-3">
+                <span className="text-green-300 text-2xl">✔️</span> Lat Pull-down
+              </div>
+              <div className="flex items-center text-lg text-white gap-3">
+                <span className="text-green-300 text-2xl">✔️</span> Dumbbell Press
+              </div>
+              <div className="flex items-center text-lg text-white gap-3">
+                <span className="text-green-300 text-2xl">✔️</span> Romanian Deadlift
+              </div>
             </div>
-           
-          </section>
-           <p className="mt-3 text-sm font-black text-gray-800 text-center">
-              Close to target is fine (±10%).
-            </p>
+            {/* Dumbbell Illustration */}
+            <div className="flex-1 flex items-end">
+              <svg width={90} height={56} viewBox="0 0 90 56" fill="none">
+                <ellipse cx="67" cy="44" rx="16" ry="8" fill="#aebffc" />
+                <ellipse cx="23" cy="44" rx="16" ry="8" fill="#aebffc" />
+                <rect x="25" y="36" width="40" height="16" rx="8" fill="#62a8ff" />
+              </svg>
+            </div>
+          </div>
+          <span className="block mt-2 text-gray-700 font-semibold text-center lg:text-left text-base">Close to target is fine (±10%).</span>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
